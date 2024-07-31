@@ -6,6 +6,7 @@ import Intro from '../components/intro'
 import Layout from '../components/layout'
 import { getAllPostsForHome } from '../lib/api'
 import { CMS_NAME } from '../lib/constants'
+import Carousel from '../components/SwiperCarousel/swiperCard.jsx'
 
 export default function Index({ allPosts: { edges }, preview }) {
   const heroPost = edges[0]?.node
@@ -31,6 +32,7 @@ export default function Index({ allPosts: { edges }, preview }) {
         <h1 style={{color: 'red'}}>{}</h1>
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
       </Container>
+      <Carousel/>
     </Layout>
   )
 }
